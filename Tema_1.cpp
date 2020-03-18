@@ -20,8 +20,6 @@ bool evaluate(string k, int in)
     vector<int> sc, tmp;
     sc.push_back(in);
     int lc = -1;
-    bool sf = 0;
-
 
     while(!sc.empty())
     {
@@ -52,23 +50,15 @@ bool evaluate(string k, int in)
                     tmp.push_back(del[sc[i]][trad[k[lc]]][j]);
                 }
 
-
             }
 
             sc = tmp;
         }
 
-
-
-
-
-
     }
 
     return false;
-
 }
-
 
 
 int main()
