@@ -9,11 +9,9 @@ ifstream tin("autom.txt");
 
 vector<int> del[100][100];
 
-
 map<char, int> trad;
 
 bool fin[100];
-
 
 bool evaluate(string k, int in)
 {
@@ -49,9 +47,8 @@ bool evaluate(string k, int in)
                 {
                     tmp.push_back(del[sc[i]][trad[k[lc]]][j]);
                 }
-
             }
-
+            
             sc = tmp;
         }
 
@@ -73,9 +70,7 @@ int main()
     for(int i=0; i<m; i++)
     {
         tin>>tt;
-
         if(t!='$') trad.insert(pair<char, int>(tt, ++in));
-
     }
 
     trad.insert(pair<char, int>('$', -1));
@@ -105,7 +100,7 @@ int main()
     {
         cout<<"Testul "<<++p<<": ";
         cin>>test;
-        cout<<(evaluate(test, q0) ? "Acceptat\n" : "Neacceptat\n")<<"\n";
+        cout<<(evaluate(test, q0) ? "Acceptat\n\n" : "Neacceptat\n\n");
 
     }
     return 0;
